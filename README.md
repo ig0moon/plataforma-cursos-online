@@ -1,12 +1,55 @@
-# React + Vite
+# 🎓 Plataforma de Cadastro de Cursos Online
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação web desenvolvida em **React** para cadastro e consulta de cursos. Os dados são armazenados localmente com `localStorage` e também são exibidos cursos populares de uma API externa (GitHub Repositories).
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Funcionalidades
 
-## Expanding the ESLint configuration
+- Cadastro de cursos com título e descrição.
+- Consulta de cursos cadastrados localmente.
+- Consulta de cursos externos (ex: linguagens populares no GitHub).
+- Validação de formulários com JavaScript puro.
+- Layout responsivo com Tailwind CSS.
+- Navegação entre páginas com React Router.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## 🚀 Tecnologias Utilizadas
+
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Router](https://reactrouter.com/)
+- [GitHub API](https://docs.github.com/en/rest)
+- JavaScript, HTML5, CSS3
+
+
+## 🖼️ Layout e Responsividade
+
+- A interface foi criada com **Tailwind CSS** usando `Flexbox` e `Grid`.
+- `Media Queries` são utilizadas para adaptar o conteúdo a diferentes tamanhos de tela.
+
+## 📥 Instalação e Execução
+
+1. **Clone o repositório**
+git clone https://github.com/seu-usuario/plataforma-cursos-online.git
+cd plataforma-cursos-online
+
+2. **Instale as dependências**
+npm install
+
+3. **Execute o projeto**
+npm run dev
+
+4. **Acesse no navegador**
+http://localhost:5173
+
+
+## 📁 Armazenamento de Dados
+Os cursos cadastrados localmente são salvos no navegador com localStorage.
+Os cursos externos são carregados dinamicamente com fetch() a partir da GitHub API.
+
+
+## 🧪 Melhorias Futuras
+Integração com banco de dados real.
+Login e autenticação de usuários.
+Upload de imagens para os cursos.
+Filtro e ordenação dos cursos.

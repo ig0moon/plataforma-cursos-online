@@ -1,23 +1,35 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cadastro from "./pages/Cadastro";
 import Consulta from "./pages/Consulta";
+import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
+import { AuthProvider } from "./context/AuthContext";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => {
   return (
-    <Router>
-      <div className="min-h-screen bg-gray-50 flex flex-col items-center">
-        <Navbar />
-        <div className="w-full max-w-4xl mt-8 mx-auto">
-        <Routes>
-          <Route path="/" element={<Cadastro />} />
-          <Route path="/cadastro" element={<Cadastro />} />
-          <Route path="/consulta" element={<Consulta />} />
-        </Routes>
+    <AuthProvider>
+      <Router>
+        <div className="min-h-screen bg-gray-50">
+          <Navbar />
+          <Routes>
+            <Route path="/cadastro" element={
+              <ProtectedRoute>
+                <Cadastro />
+              </ProtectedRoute>
+            } />
+            <Route path="/login" element={<Login />} />
+            <Route path="/consulta" element={ 
+              <ProtectedRoute>
+                  <Consulta />
+                </ProtectedRoute>
+              }
+            />
+          </Routes>
         </div>
-      </div>
-    </Router>
+      </Router>
+    </AuthProvider>
   );
 };
 

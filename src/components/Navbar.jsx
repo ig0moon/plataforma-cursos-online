@@ -7,6 +7,7 @@ const Navbar = () => (
     <div className="flex gap-6 items-center">
       <Link to="/cadastro" className="hover:text-blue-200 transition">Cadastro</Link>
       <Link to="/consulta" className="hover:text-blue-200 transition">Consulta</Link>
+      <Link to="/login" className="hover:text-blue-200 transition">Entrar</Link>
     </div>
   </nav>
 );
